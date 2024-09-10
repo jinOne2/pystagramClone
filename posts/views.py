@@ -159,3 +159,5 @@ def post_like(request, post_id):
     return HttpResponseRedirect(url_next)
 
 
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)

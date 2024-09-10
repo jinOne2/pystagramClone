@@ -20,6 +20,7 @@ from django.urls import path, include
 
 from config.views import index
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("posts/", include("posts.urls")),
@@ -31,4 +32,4 @@ urlpatterns += static(
     document_root=settings.MEDIA_ROOT,
 )
 
-handler404 = 'common.views.page_not_found'
+handler404 = 'posts.views.custom_404'
