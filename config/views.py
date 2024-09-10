@@ -1,4 +1,4 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 
 def index(request):
@@ -6,3 +6,7 @@ def index(request):
         return redirect("posts:feeds")
     else:
         return redirect("users:login")
+
+
+def page_not_found(request, exception):
+    return render(request, '404.html', {})
