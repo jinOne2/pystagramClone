@@ -8,5 +8,3 @@ def index(request):
         return redirect("users:login")
 
 
-def page_not_found(request, exception):
-    return render(request, '/404.html', {})

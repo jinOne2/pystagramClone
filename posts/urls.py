@@ -20,3 +20,5 @@ urlpatterns = [
     path("<int:post_id>/", post_detail, name="post_detail"),
     path("<int:post_id>/like/", post_like, name="post_like"),
 ]
+
+
